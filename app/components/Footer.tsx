@@ -1,0 +1,21 @@
+export default function Footer() {
+  return (
+    <div className="container-fluid">
+      <footer>
+        <div className="art-copy">© 2025 Ahmed Mostafa</div>
+        <div>
+          Download{" "}
+          <a
+            href="/Ahmed_Mostafa_Senior_FrontEnd_Developer.pdf"
+            target="_blank"
+            download
+            data-no-swup
+            rel="noreferrer"
+          >
+            Ahmed&apos;s Resume
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
