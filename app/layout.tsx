@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Menu from "./components/Menu";
 import ThemeToggle from "./components/ThemeToggle";
 import "./globals.css";
 
@@ -91,19 +92,10 @@ export default function RootLayout({
                   </div>
                   <div className="art-current-page"></div>
                   <div className="art-scroll-frame">
-                    <nav id="swupMenu">
-                      <ul className="main-menu">
-                        <li className="menu-item current-menu-item">
-                          <a href="/">Home</a>
-                        </li>
-                        <li className="menu-item">
-                          <a href="/portfolio">Portfolio</a>
-                        </li>
-                      </ul>
-                    </nav>
-                    <div className="art-theme-toggle-wrap" style={{ position: "fixed", bottom: "20px", flexDirection: "column" }}>
+                    <Menu />
+                    {/* <div className="art-theme-toggle-wrap" style={{ position: "fixed", bottom: "20px", flexDirection: "column" }}>
                       <ThemeToggle />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -132,35 +124,6 @@ export default function RootLayout({
         <Script src="/js/plugins/fancybox.min.js" strategy="afterInteractive" />
         <Script src="/js/plugins/swup.min.js" strategy="afterInteractive" />
         <Script src="/js/main.js" strategy="afterInteractive" />
-        <Script id="contact-form-handler" strategy="afterInteractive">
-          {`
-          const form = document.getElementById('form');
-          if (form) {
-            form.addEventListener('submit', function (event) {
-              event.preventDefault();
-              const formData = new FormData(form);
-              fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-              })
-                .then(response => {
-                  if (response.ok) {
-                    const successMessage = document.getElementById('success-message');
-                    if (successMessage) successMessage.style.display = 'block';
-                    form.reset();
-                  } else {
-                    throw new Error('Network response was not ok.');
-                  }
-                })
-                .catch(error => {
-                  // eslint-disable-next-line no-console
-                  console.error('There was a problem with the fetch operation:', error);
-                });
-            });
-          }
-        `}
-        </Script>
       </body>
     </html>
   );

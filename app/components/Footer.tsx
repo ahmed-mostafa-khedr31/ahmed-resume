@@ -2,9 +2,9 @@ export default function Footer() {
   return (
     <div className="container-fluid">
       <footer>
-        <div className="art-copy">© 2025 Ahmed Mostafa</div>
+        <div className="art-copy">© 2026 Ahmed Mostafa</div>
         <div>
-          Download{" "}
+        Download{" "}
           <a
             href="/Ahmed_Mostafa_Senior_FrontEnd_Developer.pdf"
             target="_blank"
@@ -12,7 +12,7 @@ export default function Footer() {
             data-no-swup
             rel="noreferrer"
           >
-            Ahmed&apos;s Resume
+             My Resume (PDF)
           </a>
         </div>
       </footer>

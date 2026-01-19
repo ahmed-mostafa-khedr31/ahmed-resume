@@ -116,11 +116,11 @@ const projects = [
     clamp: false,
   },
   {
-    title: "SOHO Event",
+    title: "SOHO Events",
     description:
       "I created the event page for Carole Samaha’s live concert at SOHO Square, showcasing event details, highlights, and a clear call to action for attendees.",
     image: "/img/works/event-soho.png",
-    link: "https://event.soho-sharm.com/carole-samaha/",
+    link: "https://event.soho-sharm.com/ramysabry-20250131",
     category: "Event",
     clamp: false,
   },

@@ -1,3 +1,5 @@
+import ContactForm from "./components/ContactForm";
+import Counters from "./components/Counters";
 import Typewriter from "./components/Typewriter";
 
 const services = [
@@ -191,7 +193,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="container-fluid">
+      <section className="container-fluid">
         <div className="row p-60-0 p-lg-30-0 p-md-15-0">
           <div className="col-lg-12">
             <div className="art-a art-banner" style={{ backgroundImage: "url(/img/bg.jpg)" }}>
@@ -222,51 +224,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container-fluid">
+      <section className="container-fluid">
         <div className="row p-30-0">
-          <div className="col-md-3 col-6">
-            <div className="art-counter-frame">
-              <div className="art-counter-box">
-                <span className="art-counter">5</span>
-                <span className="art-counter-plus">+</span>
+          <div className="col-lg-12">
+            <div className="art-section-title">
+              <div className="art-title-frame">
+                <h4>About</h4>
               </div>
-              <h6>+Years Experience</h6>
             </div>
-          </div>
-
-          <div className="col-md-3 col-6">
-            <div className="art-counter-frame">
-              <div className="art-counter-box">
-                <span className="art-counter">80</span>
-              </div>
-              <h6>Completed Projects</h6>
-            </div>
-          </div>
-
-          <div className="col-md-3 col-6">
-            <div className="art-counter-frame">
-              <div className="art-counter-box">
-                <span className="art-counter">10</span>
-              </div>
-              <h6>Happy Customers</h6>
-            </div>
-          </div>
-
-          <div className="col-md-3 col-6">
-            <div className="art-counter-frame">
-              <div className="art-counter-box">
-                <span className="art-counter">5</span>
-                <span className="art-counter-plus">+</span>
-              </div>
-              <h6>Free Lancing Projects</h6>
+            <div className="art-a art-card">
+              <p className="mb-15">
+                Senior Frontend Engineer with 5+ years of experience building{" "}
+                <strong>high-performance, scalable web applications</strong>{" "}
+                using React.js, Next.js, and TypeScript. I specialize in
+                converting complex WordPress &amp; Elementor websites into
+                modern Next.js architectures while focusing on{" "}
+                <strong>performance, SEO, and clean code</strong>.
+              </p>
+              <ul className="mb-15">
+                <li>5+ years of experience in Frontend Development</li>
+                <li>Expert in React.js, Next.js (App Router), TypeScript</li>
+                <li>Migrated multiple WordPress &amp; Elementor websites to Next.js</li>
+                <li>
+                  Strong skills in Performance Optimization, Core Web Vitals,
+                  SEO, and responsive UI/UX
+                </li>
+              </ul>
+              <p className="mb-10">
+                <strong>Tech Stack:</strong>
+              </p>
+              <p className="mb-15">
+                React.js • Next.js • TypeScript • JavaScript (ES6+) <br />
+                HTML • CSS • Tailwind • MUI <br />
+                REST APIs • Git • Performance Optimization • SEO
+              </p>
+              <p className="mb-0">
+                Currently open to Senior Frontend / Frontend Lead opportunities.
+                Let's connect!
+              </p>
+      <Counters />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container-fluid">
+
+
+      <section className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
             <div className="art-section-title">
@@ -292,9 +298,9 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="container-fluid">
+      <section className="container-fluid">
         <div className="row">
           <div className="col-lg-6">
             <div className="art-section-title">
@@ -370,9 +376,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container-fluid" id="portfolio">
+      <section className="container-fluid" id="portfolio">
         <div className="row p-30-0">
           <div className="col-lg-12">
             <div className="art-section-title">
@@ -435,9 +441,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container-fluid">
+      <section className="container-fluid">
         <div className="row p-30-0">
           <div className="col-lg-12">
             <div className="art-section-title">
@@ -447,39 +453,11 @@ export default function Home() {
             </div>
 
             <div className="art-a art-card">
-              <form className="art-contact-form" id="form" action="https://formspree.io/f/xwpkqajr" method="POST">
-                <div className="art-form-field">
-                  <input id="name" name="name" className="art-input" type="text" placeholder="Name" required />
-                  <label htmlFor="name">
-                    <i className="fas fa-user"></i>
-                  </label>
-                </div>
-                <div className="art-form-field">
-                  <input id="email" name="email" className="art-input" type="email" placeholder="Email" required />
-                  <label htmlFor="email">
-                    <i className="fas fa-at"></i>
-                  </label>
-                </div>
-                <div className="art-form-field">
-                  <textarea id="message" name="message" className="art-input" placeholder="Message" required></textarea>
-                  <label htmlFor="message">
-                    <i className="far fa-envelope"></i>
-                  </label>
-                </div>
-
-                <div className="art-submit-frame">
-                  <button className="art-btn art-btn-md art-submit" type="submit">
-                    <span>Send message</span>
-                  </button>
-                  <div className="art-success" id="success-message" style={{ display: "none" }}>
-                    Success <i className="fas fa-check"></i>
-                  </div>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

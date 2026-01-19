@@ -19,17 +19,21 @@ $(function () {
   const swup = new Swup(options);
 
   // scrollbar
-  Scrollbar.use(OverscrollPlugin);
-  Scrollbar.init(document.querySelector("#scrollbar"), {
-    damping: 0.05,
-    renderByPixel: true,
-    continuousScrolling: true,
-  });
-  Scrollbar.init(document.querySelector("#scrollbar2"), {
-    damping: 0.05,
-    renderByPixel: true,
-    continuousScrolling: true,
-  });
+  if (window.Scrollbar && window.OverscrollPlugin) {
+    if (window.Scrollbar && window.OverscrollPlugin) {
+      Scrollbar.use(OverscrollPlugin);
+      Scrollbar.init(document.querySelector("#scrollbar"), {
+        damping: 0.05,
+        renderByPixel: true,
+        continuousScrolling: true,
+      });
+      Scrollbar.init(document.querySelector("#scrollbar2"), {
+        damping: 0.05,
+        renderByPixel: true,
+        continuousScrolling: true,
+      });
+    }
+  }
 
   // page loading
   $(document).ready(function () {
@@ -69,39 +73,6 @@ $(function () {
   });
 
   bar.animate(1);
-
-  // counters
-  anime({
-    targets: ".art-counter-frame",
-    opacity: [0, 1],
-    duration: 800,
-    delay: 2300,
-    easing: "linear",
-  });
-
-  anime({
-    targets: ".art-counter",
-    delay: 1300,
-    opacity: [1, 1],
-    complete: function (anim) {
-      $(".art-counter").each(function () {
-        $(this)
-          .prop("Counter", 0)
-          .animate(
-            {
-              Counter: $(this).text(),
-            },
-            {
-              duration: 2000,
-              easing: "linear",
-              step: function (now) {
-                $(this).text(Math.ceil(now));
-              },
-            }
-          );
-      });
-    },
-  });
 
   // progressbars
   // var bar = new ProgressBar.Circle(circleprog1, {
