@@ -93,7 +93,7 @@ const projects = [
     description:
       "Developed a real-time auction platform and dashboard using Next.js and Socket.io for live bidding, with secure Auth/RBAC and optimized rendering for strong SEO and performance scores.",
     image: "/img/works/1.jpg",
-    link: "#",
+    link: "https://falakalkhayer.sa",
     category: "Other",
     clamp: false,
   },
@@ -102,7 +102,7 @@ const projects = [
     description:
       "Architected a real-estate auction system with real-time bidding synchronization, advanced state management, complex authorization, and optimized API integration.",
     image: "/img/works/2.jpg",
-    link: "#",
+    link: "https://broker.sa",
     category: "Other",
     clamp: false,
   },
@@ -111,7 +111,16 @@ const projects = [
     description:
       "Implemented Next.js SSR to boost SEO rankings and increase organic traffic by 25%.",
     image: "/img/works/3.jpg",
-    link: "#",
+    link: "https://wingsgroup.travel",
+    category: "Hospitality",
+    clamp: false,
+  },
+  {
+    title: "Dhara Hotels",
+    description:
+      "I developed the Dhara Hotels website, showcasing properties, booking features, and a premium hospitality experience.",
+    image: "/img/works/4.jpg",
+    link: "https://dharahotels.com/en",
     category: "Hospitality",
     clamp: false,
   },
@@ -175,12 +184,12 @@ export default function PortfolioPage() {
                   style={
                     project.clamp
                       ? {
-                          display: "-webkit-box",
-                          WebkitLineClamp: 4,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                        }
+                        display: "-webkit-box",
+                        WebkitLineClamp: 4,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }
                       : undefined
                   }
                 >

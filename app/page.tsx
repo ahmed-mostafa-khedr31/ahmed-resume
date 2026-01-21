@@ -160,7 +160,7 @@ const projects = [
     description:
       "Developed a real-time auction platform and dashboard using Next.js and Socket.io for live bidding, with secure Auth/RBAC and optimized rendering for strong SEO and performance scores.",
     image: "/img/works/1.jpg",
-    link: "#",
+    link: "https://falakalkhayer.sa",
     category: "Other",
     clamp: false,
   },
@@ -169,7 +169,7 @@ const projects = [
     description:
       "Architected a real-estate auction system with real-time bidding synchronization, advanced state management, complex authorization, and optimized API integration.",
     image: "/img/works/2.jpg",
-    link: "#",
+    link: "https://broker.sa",
     category: "Other",
     clamp: false,
   },
@@ -178,7 +178,7 @@ const projects = [
     description:
       "Implemented Next.js SSR to boost SEO rankings and increase organic traffic by 25%.",
     image: "/img/works/3.jpg",
-    link: "#",
+    link: "https://wingsgroup.travel",
     category: "Hospitality",
     clamp: false,
   },
@@ -196,7 +196,10 @@ export default function Home() {
       <section className="container-fluid">
         <div className="row p-60-0 p-lg-30-0 p-md-15-0">
           <div className="col-lg-12">
-            <div className="art-a art-banner" style={{ backgroundImage: "url(/img/bg.jpg)" }}>
+            <div
+              className="art-a art-banner"
+              style={{ backgroundImage: "url(/img/bg.jpg)" }}
+            >
               <div className="art-banner-back"></div>
               <div className="art-banner-dec"></div>
               <div className="art-banner-overlay">
@@ -207,19 +210,31 @@ export default function Home() {
                   </h1>
                   <div className="art-lg-text art-code mb-25">
                     &lt;<i>code</i>&gt; I'm Front End Developer{" "}
-                    <Typewriter texts={rotateTexts} period={200} speed={25} deleteSpeed={10} />
+                    <Typewriter
+                      texts={rotateTexts}
+                      period={200}
+                      speed={25}
+                      deleteSpeed={10}
+                    />
                     &lt;/<i>code</i>&gt;
                   </div>
                   <div className="art-buttons-frame">
                     <a href="/portfolio" className="art-btn art-btn-md">
                       <span>Explore now</span>
                     </a>
-                    <a href="tel:+201090723497" className="art-link art-white-link art-w-chevron">
+                    <a
+                      href="tel:+201090723497"
+                      className="art-link art-white-link art-w-chevron"
+                    >
                       Hire me
                     </a>
                   </div>
                 </div>
-                <img src="/img/face-2.png" className="art-banner-photo" alt="Your Name" />
+                <img
+                  src="/img/face-2.png"
+                  className="art-banner-photo"
+                  alt="Your Name"
+                />
               </div>
             </div>
           </div>
@@ -246,7 +261,10 @@ export default function Home() {
               <ul className="mb-15">
                 <li>5+ years of experience in Frontend Development</li>
                 <li>Expert in React.js, Next.js (App Router), TypeScript</li>
-                <li>Migrated multiple WordPress &amp; Elementor websites to Next.js</li>
+                <li>
+                  Migrated multiple WordPress &amp; Elementor websites to
+                  Next.js
+                </li>
                 <li>
                   Strong skills in Performance Optimization, Core Web Vitals,
                   SEO, and responsive UI/UX
@@ -264,13 +282,11 @@ export default function Home() {
                 Currently open to Senior Frontend / Frontend Lead opportunities.
                 Let's connect!
               </p>
-      <Counters />
+              <Counters />
             </div>
           </div>
         </div>
       </section>
-
-
 
       <section className="container-fluid">
         <div className="row">
@@ -289,7 +305,10 @@ export default function Home() {
                   <h5 className="mb-15">{service.title}</h5>
                   <div className="mb-15">{service.description}</div>
                   <div className="art-buttons-frame">
-                    <a href="tel:+201090723497" className="art-link art-color-link art-w-chevron">
+                    <a
+                      href="tel:+201090723497"
+                      className="art-link art-color-link art-w-chevron"
+                    >
                       Contact me
                     </a>
                   </div>
@@ -311,7 +330,10 @@ export default function Home() {
 
             <div className="art-timeline">
               {workHistory.map((item) => (
-                <div key={`${item.company}-${item.date}`} className="art-timeline-item">
+                <div
+                  key={`${item.company}-${item.date}`}
+                  className="art-timeline-item"
+                >
                   <div className="art-timeline-mark-light"></div>
                   <div className="art-timeline-mark"></div>
 
@@ -345,7 +367,10 @@ export default function Home() {
 
             <div className="art-timeline art-gallery" id="history">
               {education.map((item) => (
-                <div key={`${item.title}-${item.date}`} className="art-timeline-item">
+                <div
+                  key={`${item.title}-${item.date}`}
+                  className="art-timeline-item"
+                >
                   <div className="art-timeline-mark-light"></div>
                   <div className="art-timeline-mark"></div>
 
@@ -353,7 +378,9 @@ export default function Home() {
                     <div className="art-card-header">
                       <div className="art-left-side">
                         <h5>{item.title}</h5>
-                        <div className="art-el-suptitle mb-15">{item.subtitle}</div>
+                        <div className="art-el-suptitle mb-15">
+                          {item.subtitle}
+                        </div>
                       </div>
                       <div className="art-right-side">
                         <span className="art-date">{item.date}</span>
@@ -390,7 +417,10 @@ export default function Home() {
 
           <div className="art-grid art-grid-3-col art-gallery">
             {projects.map((project) => (
-              <div key={project.title} className={`art-grid-item ${project.category}`}>
+              <div
+                key={project.title}
+                className={`art-grid-item ${project.category}`}
+              >
                 <a
                   data-fancybox="gallery"
                   data-no-swup
@@ -410,12 +440,12 @@ export default function Home() {
                     style={
                       project.clamp
                         ? {
-                            display: "-webkit-box",
-                            WebkitLineClamp: 4,
-                            WebkitBoxOrient: "vertical",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                          }
+                          display: "-webkit-box",
+                          WebkitLineClamp: 4,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                        }
                         : undefined
                     }
                   >
